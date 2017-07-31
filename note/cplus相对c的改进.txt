@@ -1,0 +1,7 @@
+C++ 是在C语言的基础上改进的，C语言的很多语法在 C++ 中依然广泛使用，例如：
+C++ 仍然使用 char、short、int、long、float、double 等基本数据类型；
+C++ 仍然使用 if...else、while、for、switch、break 等分支或循环结构；
+C++ 仍然使用 +、-、*、/、%、++、--、<<、>> 等运算符；
+C++ 仍然使用 typedef、#define、enum、struct 等；
+C++ 仍然使用C语言中经典的指针（Pointer），并且使用范围有增无减，甚至不可或缺。
+
