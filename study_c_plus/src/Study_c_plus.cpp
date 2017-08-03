@@ -8,16 +8,20 @@
 
 #include <iostream>
 #include <string>
+#include <sstream>
+using namespace std;
 
 
 void testAllBase();
 void testAllObj();
+void testAdvance();
 
 
 int main() {
-
 	//testAllBase();
-	testAllObj();
+	//testAllObj();
+	testAdvance();
+
 	return 0;
 }
 

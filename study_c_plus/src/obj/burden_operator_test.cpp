@@ -34,7 +34,7 @@ private:
 };
 // 程序的主函数
 void testBurdenOperator() {
-	log("======= start testBurdenOperator() ========");
+	logM("======= start testBurdenOperator() ========");
 	BoxBurdenOperator Box1;                // 声明 Box1，类型为 Box
 	BoxBurdenOperator Box2;                // 声明 Box2，类型为 Box
 	BoxBurdenOperator Box3;                // 声明 Box3，类型为 Box
