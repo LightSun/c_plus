@@ -6,34 +6,38 @@ using namespace std;
 
 void __logImpl(short int level, string tag, string method, bool newline, int count, ...);
 
+string level2String(short int level){
+	string le;
+		switch (level) {
+		case LEVEL_VERBOSE:
+			le = "VERBOSE";
+			break;
+		case LEVEL_DEBUG:
+			le = "DEBUG";
+			break;
+
+		default:
+		case LEVEL_INFO:
+			le = "INFO";
+			break;
+
+		case LEVEL_WARN:
+			le = "WARN";
+			break;
+		case LEVEL_ERROR:
+			le = "ERROR";
+			break;
+		case LEVEL_ASSERT:
+			le = "ASSERT";
+			break;
+		}
+	return le;
+}
+
 void __logLevel(short int level, string tag, string method, string msg) {
 	__logImpl(level, tag, method, true, 1, msg);
-	/*string le;
-	switch (level) {
-	case LEVEL_VERBOSE:
-		le = "VERBOSE";
-		break;
-	case LEVEL_DEBUG:
-		le = "DEBUG";
-		break;
-
-	default:
-	case LEVEL_INFO:
-		le = "INFO";
-		break;
-
-	case LEVEL_WARN:
-		le = "WARN";
-		break;
-	case LEVEL_ERROR:
-		le = "ERROR";
-		break;
-	case LEVEL_ASSERT:
-		le = "ASSERT";
-		break;
-	}
-
-	cout << "LOG(" + le + "), TAG = " << tag + ", called [ " + method + "()]: "
+   /*
+	cout << "LOG(" + level2String(level) + "), TAG = " << tag + ", called [ " + method + "()]: "
 			<< msg << endl;*/
 }
 
@@ -83,32 +87,7 @@ void logE2(string tag, string method, string m1, string m2){
 }
 
 void __logImpl(short int level, string tag, string method, bool newline, int count, ...) {
-	string le;
-	switch (level) {
-	case LEVEL_VERBOSE:
-		le = "VERBOSE";
-		break;
-	case LEVEL_DEBUG:
-		le = "DEBUG";
-		break;
-
-	default:
-	case LEVEL_INFO:
-		le = "INFO";
-		break;
-
-	case LEVEL_WARN:
-		le = "WARN";
-		break;
-	case LEVEL_ERROR:
-		le = "ERROR";
-		break;
-	case LEVEL_ASSERT:
-		le = "ASSERT";
-		break;
-	}
-
-	cout << "LOG(" + le + "), TAG = " << tag + ", called [ " + method + "()]: ";
+	cout << "LOG(" + level2String(level)  + "), TAG = " << tag + ", called [ " + method + "()]: ";
 
 	va_list valist;
 	//初始化指定个数的valist

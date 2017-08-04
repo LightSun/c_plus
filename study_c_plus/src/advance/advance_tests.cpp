@@ -6,6 +6,10 @@ void testDynamicMemory();
 void testNamespace();
 void testTemplate1();
 void testTemplateClass();
+void testOut_template2();
+void testOut_template1();
+void test_ReinpreterCast();
+void test_ConstCast();
 
 void testAdvance() {
 	testFileIO();
@@ -15,4 +19,8 @@ void testAdvance() {
 	testNamespace();
 	testTemplate1();
 	testTemplateClass();
+	testOut_template1();
+	testOut_template2();
+	test_ReinpreterCast();
+	test_ConstCast();
 }
