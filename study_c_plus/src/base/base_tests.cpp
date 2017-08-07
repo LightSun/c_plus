@@ -22,6 +22,7 @@ void testRefer();
 void testDateTime();
 void testStdIO();
 void testStruct();
+void testSimplePointer1();
 ;
 /**
  * test all base demo.
@@ -35,6 +36,7 @@ void testAllBase(){
 	testRefer();
 	testDateTime();
 	testStruct();
+	testSimplePointer1();
 }
 void testStdIO(){
 	cout << "!!!Hello World!!! please input string..." << endl; // prints !!!Hello World!!!

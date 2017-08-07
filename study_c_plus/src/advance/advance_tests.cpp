@@ -10,6 +10,8 @@ void testOut_template2();
 void testOut_template1();
 void test_ReinpreterCast();
 void test_ConstCast();
+void testMethodPointer();
+void testClassMethodPointer();
 
 void testAdvance() {
 	testFileIO();
@@ -23,4 +25,6 @@ void testAdvance() {
 	testOut_template2();
 	test_ReinpreterCast();
 	test_ConstCast();
+	testMethodPointer();
+	testClassMethodPointer();
 }

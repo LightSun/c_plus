@@ -51,6 +51,9 @@ void logI2(string tag, string method, string m1, string m2);
 void logW2(string tag, string method, string m1, string m2);
 void logE2(string tag, string method, string m1, string m2);
 
+#ifndef __com_heaven7_com_loglib__
+#define __com_heaven7_com_loglib__
+
 namespace heaven7 {
 class Logger {
 public:
@@ -117,4 +120,5 @@ private:
 	bool _newline;
 };
 }
+#endif /* __com_heaven7_com_loglib__ */
 

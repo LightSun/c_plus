@@ -11,19 +11,20 @@ public:
 	void setHeight(int h) {
 		height = h;
 	}
+	int getCost(int area) {
+			return area * 10;
+	}
 protected:
 	int width;
 	int height;
 };
 
 // 基类 PaintCost
-class PaintCost
-{
-   public:
-      int getCost(int area)
-      {
-         return area * 70;
-      }
+class PaintCost {
+public:
+	int getCost(int area) {
+		return area * 70;
+	}
 };
 
 // 子类 (可以访问父类非private成员 ) 这里继承2个类
@@ -31,6 +32,11 @@ class Rectangle: public Shape, public PaintCost {
 public:
 	int getArea() {
 		return (width * height);
+	}
+
+	int getCost(int area) {
+		//c++ 支持多继承。 如果所以最好在前面加上类名前缀。 免得出错。
+		return PaintCost::getCost(area);
 	}
 };
 
