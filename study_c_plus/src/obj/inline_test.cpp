@@ -15,7 +15,10 @@
 
 using namespace std;
 
-inline int max(int x, int y){
+//这里attribute 表示强制使用inline(内联)
+extern inline int max(int x, int y)__attribute__((always_inline));
+
+int max(int x, int y){
    return (x > y)? x : y;
 }
 

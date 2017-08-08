@@ -18,9 +18,9 @@ void testAdvance();
 
 
 int main() {
-	testAllBase();
+	//testAllBase();
 	//testAllObj();
-	//testAdvance();
+	testAdvance();
 
 	return 0;
 }

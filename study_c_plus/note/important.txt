@@ -1,4 +1,7 @@
 
 
-__attribute__详解：  http://www.cnblogs.com/astwish/p/3460618.html
+__attribute__：  http://www.cnblogs.com/astwish/p/3460618.html
 c/c++ 预处理或者宏：    http://www.runoob.com/cplusplus/cpp-preprocessor.html
+
+__attribute__ 深入解析
+https://www.zybuluo.com/yiltoncent/note/87733

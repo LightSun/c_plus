@@ -12,6 +12,7 @@ void test_ReinpreterCast();
 void test_ConstCast();
 void testMethodPointer();
 void testClassMethodPointer();
+void testAttribute();
 
 void testAdvance() {
 	testFileIO();
@@ -27,4 +28,5 @@ void testAdvance() {
 	test_ConstCast();
 	testMethodPointer();
 	testClassMethodPointer();
+	testAttribute();
 }

@@ -1,0 +1,61 @@
+
+
+详细地址: https://www.zybuluo.com/yiltoncent/note/87733
+
+关键字__attribute__允许你声明时指定特殊的属性。这个关键字后面跟着双层括号引起来的属性说明。目前定义用于函数的属性：
+
+
+aligned             使得整个结构体 以多少字节对齐。
+alloc_size 
+alloc_align
+assume_aligned
+noreturn              不使用返回值.
+returns_twice
+noinline              强制不使用内联
+noclone
+no_icf
+always_inline         总是使用内联函数
+flatten
+pure
+const
+nothrow               不抛出异常
+sentinel
+format
+format_arg
+no_instrument_function
+no_split_stack
+section
+constructor
+destructor
+used
+unused
+deprecated
+weak
+malloc
+alias
+ifunc
+warn_unused_result        如果调用者未使用函数的返回值，则警告
+nonnull                   检查空指针，结合选项-Wnonnull
+returns_nonnull
+gnu_inline
+externally_visible
+hot
+cold
+artificial
+no_sanitize_address
+no_address_safety_analysis
+no_sanitize_thread
+no_sanitize_undefined
+no_reorder
+bnd_legacy
+bnd_instrument
+stack_protect
+error
+warning
+init_priority             only c++  表示初始化的优先级 . see __attribute__test3.cpp
+
+nonnull:
+    nonnull属性指定一些函数参数应为非空指针。举了一个例子，这个例子中__attribute__((nonnull (1, 2)))
+          会引起编译器检查参数dest和src是否为非空。同时这个属性跟编译器选项-Wnonnull有联系，如果传入空指针到标记为非空的参数，
+          且使能了-Wnonnull，编译器会报warning。另外如果不指定nonnull属性的参数索引号，则所有指针参数都被标记为非空。
+    
