@@ -27,17 +27,23 @@ struct p {
 
 /**
  * sizeof(a)+sizeof(b)+sizeof(c)=1+4+2=7
-但是 a 后面需要用 3 个字节填充，但是 b 是 4 个字节，所以 a 占用 4 字节， b 占用 4 个字节，而 c 又要占用 4 个字节。所以 sizeof(mm)=12
+但是 a 后面需要用 3 个字节填充，但是 b 是 4 个字节，
+所以 a 占用 4 字节， b 占用 4 个字节，而 c 又要占用 4 个字节。所以 sizeof(mm)=12
  */
 struct m {
 
 	char a;
-
 	int b;
-
 	short c;
 
 }__attribute__((aligned(4))) mm; //12
+
+struct m2 {
+	char a;
+	int b;
+	short c;
+
+}__attribute__((aligned)) mm2;
 
 /**
  * 因为默 认是以4 字节对齐，所以sizeof(oo)=8
@@ -45,9 +51,7 @@ struct m {
 struct o {
 
 	int a;
-
 	char b;
-
 	short c;
 
 } oo; //8
@@ -71,6 +75,7 @@ struct x {
 	short c;
 
 }__attribute__((aligned(8))) xx; //24
+
 
 
 //packed  structure 已经padding了。编译器不再padding.
@@ -115,7 +120,7 @@ void testAttribute() {
 
 	printf("sizeof(int)=%d,sizeof(short)=%d.sizeof(char)=%d\n", sizeof(int),
 			sizeof(short), sizeof(char));
-	printf("pp=%d,mm=%d \n", sizeof(pp), sizeof(mm));
+	printf("pp=%d,mm=%d , mm2 = %d\n", sizeof(pp), sizeof(mm), sizeof(mm2));
 	printf("oo=%d,xx=%d \n", sizeof(oo), sizeof(xx));
 	printf("SampleStruct1=%d, SampleStruct4=%d, SampleStruct3=%d \n",
 			sizeof(SampleStruct1), sizeof(SampleStruct4), sizeof(SampleStruct3));

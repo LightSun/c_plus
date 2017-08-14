@@ -1,0 +1,14 @@
+1）函数属性功能
+__attribute__ ((constructor))会使函数在main()函数之前被执行
+__attribute__ ((destructor))会使函数在main()退出后执行
+
+2）功能范围
+函数属性__attribute__((constructor))和__attribute__((destructor))在可执行文件或者库文件里都可以生效
+
+3）与全局变量比较
+全局变量对象: 
+	构造函数  在__attribute__((constructor)标志的函数之前调用
+	析构函数  在__attribute__((destructor))标志的函数之前调用。
+	
+demo see: constructor_test.cpp	
+	

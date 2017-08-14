@@ -13,6 +13,7 @@ void test_ConstCast();
 void testMethodPointer();
 void testClassMethodPointer();
 void testAttribute();
+void testPragmaPack();
 
 void testAdvance() {
 	testFileIO();
@@ -29,4 +30,5 @@ void testAdvance() {
 	testMethodPointer();
 	testClassMethodPointer();
 	testAttribute();
+	testPragmaPack();
 }

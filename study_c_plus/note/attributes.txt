@@ -2,6 +2,7 @@
 
 详细地址: https://www.zybuluo.com/yiltoncent/note/87733
 
+在函数或数据声明中设置其属性, 目的在于让编译器进行优化
 关键字__attribute__允许你声明时指定特殊的属性。这个关键字后面跟着双层括号引起来的属性说明。目前定义用于函数的属性：
 
 
@@ -25,8 +26,8 @@ format_arg
 no_instrument_function
 no_split_stack
 section
-constructor
-destructor
+constructor            used for method, called before main().
+destructor             used for method, called after main().
 used
 unused
 deprecated
@@ -52,6 +53,7 @@ bnd_instrument
 stack_protect
 error
 warning
+
 init_priority             only c++  表示初始化的优先级 . see __attribute__test3.cpp
 
 nonnull:
