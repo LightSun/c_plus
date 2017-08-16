@@ -28,5 +28,5 @@ void testBurdenMethod(void) {
 	// Call print to print float
 	pd.print(500.263);
 	// Call print to print character
-	pd.print("Hello C++");
+	pd.print('Hello C++');
 }

@@ -1,0 +1,6 @@
+
+========== add command option: such as -std=c++11. =========================
+
+1, Go to Project > Properties > C/C++ Build > Settings > Cross G++ Compiler > Miscellaneous
+2, In the Other flags entry, append your flag. In this case, we append -std=c++11
+=============================================================================================
