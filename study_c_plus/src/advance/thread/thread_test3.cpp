@@ -44,7 +44,7 @@ void testThread3() {
 		cout << "  exiting with status :" << status << endl;
 	}
 	cout << "Main: program exiting." << endl;
-	pthread_exit(NULL);
+	//pthread_exit(NULL); 退出的是主线程
 }
 
 /**

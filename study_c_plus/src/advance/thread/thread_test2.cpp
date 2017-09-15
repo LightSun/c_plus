@@ -37,5 +37,5 @@ void testThread2() {
 		}
 	}
 	//等各个线程退出后，进程才结束，否则进程强制结束了，线程可能还没反应过来；
-	pthread_exit(NULL);
+	pthread_exit(NULL); //main
 }
